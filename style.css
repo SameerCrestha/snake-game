@@ -1,0 +1,179 @@
+html {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #578a34;
+  text-align: center;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: white;
+  position: relative;
+}
+
+*:focus {
+  outline: 0px;
+}
+
+#info {
+  height: 10vh;
+  width: 100%;
+  margin-bottom: 5vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3vh;
+}
+
+#info * {
+  flex-grow: 1;
+}
+
+#canvas,
+#canvas-bg {
+  width: 90%;
+  height: 80vh;
+  box-sizing: border-box;
+}
+
+#canvas {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+#canvas-bg {
+  position: absolute;
+  background-color: #aad751;
+  margin-left: -90%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1em;
+  color: white;
+}
+
+.start {
+  justify-content: flex-start;
+}
+
+.s-t1 {
+  margin-top: 10vh;
+}
+
+.s-t2 {
+  font-size: 0.8em;
+  text-decoration: underline;
+}
+
+.overlay img {
+  margin: 10vh 0;
+  max-width: 100%;
+  height: 10vh;
+}
+
+.s-t4 {
+  font-size: 0.8em;
+}
+
+.s-t5 {
+  margin-top: 10vh;
+}
+
+.blink {
+  opacity: 0;
+  animation: blink 0.5s ease-in-out 3s infinite alternate;
+}
+
+ .dyk {
+  width: 80%;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 20vh;
+  font-size: 0.9em;
+  margin-top: 12vh; 
+  width:80%;
+  padding: 1%;
+}
+
+.end-score {
+  font-size: 2em;
+  background-color: green;
+  height: 20vh;
+  width: 50%;
+  border-radius: 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10vh;
+}
+
+.end-score * {
+  flex-grow: 1;
+}
+
+.popout {
+  animation: popout 0.5s ease-out 0s 1 normal forwards;
+}
+
+@keyframes blink {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes popout {
+  from {
+    opacity: 0;
+    padding: 0 20%;
+  }
+
+  to {
+    opacity: 1;
+    padding: 0;
+  }
+}
+
+.overlay {
+  display: none;
+}
+
+ @media screen and (min-width:1024px) {
+ .end-score{
+   width:30%;
+ }
+ .overlay{
+   font-size:1.5em;
+ }
+ .dyk{
+   width:30%
+ }
+}

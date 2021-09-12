@@ -1,0 +1,101 @@
+<!--
+You can change food and speed from gameover screen by tapping on the food and trophie.
+Special thanks to everyone who has helped me in the making of this game through discuss section.
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Snake Game</title>
+    <meta charset="UTF-8">
+    </meta>
+    <meta name="viweport" content="width=device-width,initial-scale=1.0">
+    <meta name="author" content="Sameer Crestha">
+    </meta>
+    <link href="style.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/pure-swipe@1.0.7/src/pure-swipe.min.js">
+    </script>
+    <script src="main.js"></script>
+</head>
+
+<body>
+
+    <div id="info">
+        <div id="info-live-score" class="live-score"></div>
+        <div id="info-high-score" class="-high-score"></div>
+    </div>
+
+    <canvas data-swipe-threshold="3" data-swipe-timeout="150" id="canvas"></canvas>
+    <canvas id="canvas-bg"></canvas>
+
+    <!--Below part for mobile overlays-->
+    <div id="mobileoverlay-start" class="start overlay">
+        <div class="s-t1">
+            Contains Sound🔊
+        </div>
+        <div class="s-t2">
+            <!-- Increase volume for better audio-->
+        </div>
+        <img src="https://thumbs.gfycat.com/AggravatingEvilKestrel-size_restricted.gif" alt="Swipe gesture">
+        <div class="s-t3">
+            Mobile detected
+        </div>
+        <div class="s-t4">
+            Touch controls enabled
+        </div>
+        <div class="s-t5 blink">
+            Tap to start
+        </div>
+    </div>
+    <div id="mobileoverlay-end" class="end overlay">
+        <div id="mo-e-dyk" class="dyk">
+            Did you know?:<span id="mo-e-fact">
+
+            </span>
+        </div>
+        <div class="end-score popout">
+            <div id="mo-e-live-score" class="live-score"></div>
+            <div id="mo-e-high-score" class="high-score"></div>
+        </div>
+        <div class="e-t1">
+            Tap to restart
+        </div>
+    </div>
+    <!--Below part for pc overlays-->
+    <div id="pcoverlay-start" class="start overlay">
+        <div class="s-t1">
+            Contains Sound🔊
+        </div>
+        <div class="s-t2">
+            <!-- Increase volume for better audio-->
+        </div>
+        <img src="https://images.vexels.com/media/users/3/153199/isolated/preview/c0facb164c02a5815d7efea4eb898a98-keyboard-arrow-keys-stroke-icon-by-vexels.png"
+            alt="Arrow keys">
+        <div class="s-t3">
+            Pc detected
+        </div>
+        <div class="s-t4">
+            Keyboard controls enabled
+        </div>
+        <div class="s-t5 blink">
+            Press enter to start
+        </div>
+    </div>
+    <div id="pcoverlay-end" class="end overlay">
+        <div id="pco-e-dyk" class="dyk">
+            Did you know?:<span id="pco-e-fact">
+
+            </span>
+        </div>
+        <div class="end-score popout">
+            <div id="pco-e-live-score" class="live-score"></div>
+            <div id="pco-e-high-score" class="high-score"></div>
+        </div>
+        <div class="e-t1">
+            Press enter to restart
+        </div>
+    </div>
+
+</body>
+
+</html>
