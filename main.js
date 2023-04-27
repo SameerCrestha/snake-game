@@ -84,6 +84,7 @@ function main() {
 }
 
 function initializer() {
+  reqFullScreen();
   if (typeof canvas == "undefined") {
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
       isMobile = true;
@@ -415,6 +416,13 @@ function fixDpi() {
   canvas.setAttribute("width", style_width * dpi);
 }
 
-function clearDefault(){
-  
+function reqFullScreen(){
+  const elem = document.documentElement;
+    if (elem.requestFullscreen) {
+      elem.requestFullscreen();
+    } else if (elem.webkitRequestFullscreen) { /* Safari */
+      elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) { /* IE11 */
+      elem.msRequestFullscreen();
+    }
 }
