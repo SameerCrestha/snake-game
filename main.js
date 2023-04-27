@@ -151,6 +151,9 @@ function initializer() {
 
 function eventSetter() {
   if (isMobile) {
+    document.addEventListener('touchmove', function(e) {
+      e.preventDefault();
+    }, { passive: false });
     canvas.addEventListener("swiped-up", () => {
       if (dir != 3 && dir != 1) {
         dir = 1;
@@ -410,4 +413,8 @@ function fixDpi() {
     .slice(0, -2);
   canvas.setAttribute("height", style_height * dpi);
   canvas.setAttribute("width", style_width * dpi);
+}
+
+function clearDefault(){
+  
 }
